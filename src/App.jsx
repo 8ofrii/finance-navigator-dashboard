@@ -15,9 +15,12 @@ const colors = ['#3498db', '#e74c3c', '#9b59b6', '#2ecc71', '#f39c12', '#1abc9c'
 const gradientColors = ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe', '#00f2fe'];
 
 // API configuration - connect to your backend
+// API configuration - connect to your backend
+const API = import.meta.env.VITE_API_URL;
 const api = axios.create({
-  baseURL: '${API}'
+  baseURL: `${API}`
 });
+
 
 const MetricCard = ({ title, value, trend, icon, color = '#f5eb0c' }) => (
   <div style={{
